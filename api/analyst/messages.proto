@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package analyst;
+
+option go_package = "github.com/tousart/factory_analyst/pkg/api/analyst;analyst";
+
+message GetUsersByIDsRequest {
+  string id = 1;
+}
+
+message GetUsersByIDsResponse {
+  string message = 1;
+}

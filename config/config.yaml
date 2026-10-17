@@ -1,0 +1,9 @@
+# Окружения для prod и stg берутся из .env-файла, по ключам:
+# FACTORY_ANALYST_PROD_HOST и FACTORY_ANALYST_STG_HOST соответственно,
+# для grpc-gateway — FACTORY_ANALYST_PROD_GATEWAY_HOST и FACTORY_ANALYST_STG_GATEWAY_HOST.
+environment: "local" # local | stg | prod
+
+hosts:
+  factory_analyst:
+    local_host: "localhost:8080"
+    local_gateway_host: "localhost:8082"

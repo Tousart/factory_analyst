@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package analyst;
+
+option go_package = "github.com/tousart/factory_analyst/pkg/api/analyst;analyst";
+
+import "google/api/annotations.proto";
+import "analyst/messages.proto";
+
+service Analyst {
+  rpc GetUsersByIDs(GetUsersByIDsRequest) returns (GetUsersByIDsResponse) {
+    option (google.api.http) = {
+      get: "/users/{id}"
+    };
+  }
+}
